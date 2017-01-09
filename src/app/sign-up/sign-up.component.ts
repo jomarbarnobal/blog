@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
 import { Angular2TokenService } from 'angular2-token'
 
+
+import { 
+    matchingPasswords, 
+    emailValidator
+} from '.././shared/validators'
+
 @Component({
     templateUrl: './sign-up.component.html',
     styleUrls: ['./sign-up.component.scss']

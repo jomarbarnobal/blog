@@ -6,6 +6,8 @@ import { routing } from './app.route'
 
 // import angular2 materialize css module
 import {MaterializeModule } from 'angular2-materialize'
+
+import { HeaderComponent } from './shared/header';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home';
 import { SignInComponent } from './sign-in';
@@ -18,7 +20,8 @@ import { Angular2TokenService } from 'angular2-token'
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
