@@ -30,13 +30,13 @@ input:-webkit-autofill:active {
 }
 
 @media screen and (max-width: 992px) and (min-width: 800px) {
-    .user-form-container .item{
+    .form-container .form-content{
         width: 50% !important;
     }
 }
 
 @media screen and (max-width: 799px) and (min-width: 0) {
-    .user-form-container .item{
+    .form-container .form-content{
         width: 90% !important;
     }
 
@@ -56,4 +56,47 @@ input:-webkit-autofill:active {
 .form-inner .form-field {
     padding: 20px 10px;
 }
+
+.full-error-message{
+    background: #F44336;
+    margin: 15px 0 15px 0;
+    padding: 1px 10px 10px 20px;
+    p {
+        color: #eee;
+    }
+}
+
+   .user-form-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #3270a0;
+    }
+
+    .item
+    {
+      background-color: #fafafa;
+      border-radius: 3px;
+      width: 30%;
+      min-height: 30%;
+    }
+    .item .block-heading {
+      padding: 2px;
+      background: #42a5f5;
+    }
+    .item .this-btn {
+      display:block;
+      margin: -26px auto;
+    }
+
+    .input-field {
+      position: relative;
+    }
+    .input-field .form-validation-message {
+      position: absolute;
+      font-size: 0.8rem;
+      color: #f44336;
+      bottom: 2px;
+    }
 

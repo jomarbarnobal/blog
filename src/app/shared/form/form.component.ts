@@ -5,7 +5,6 @@ import { UserFieldComponent } from '../../shared/form/fields'
 @Component({
     selector: 'user-form',
     templateUrl: './form.component.html',
-    styleUrls: ['./form.component.scss']
 })
 
 export class FormComponent {

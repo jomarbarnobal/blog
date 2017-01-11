@@ -1,87 +1,10 @@
-<<<<<<< HEAD
-<div class="sign-up-container">
-  <div class="item">
-    <div class="block-heading">
-         <p class="flow-text white-text center">Creating account is free!</p>
-    </div>   
-    <!--
-    <div class="row">
-      <div class="input-field col s12">
-          <error-message [errors]="_errors"></error-message>
-      </div>
-    </div> -->
-     
+<div class="form-container">
+  <div class="form-content">
+    <error-message [errors]="_errors"></error-message>
     <div class="form-inner">
-      <form class="col s12" novalidate>
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="text">
-            <label for="email">Email</label>
-            <!--
-            <div class="form-validation-message" *ngIf="!userEmail.valid && userEmail.dirty">
-              <span *ngIf="userEmail.hasError('required')">Email is required</span>
-              <span *ngIf="userEmail.hasError('invalidEmail')">Invalid email format</span>
-            </div>
-            -->
-          </div>
-        </div>
-        
-        
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="password" type="password">
-            <label for="password">Password</label>
-            <!--
-            <div class="form-validation-message" *ngIf="userPassword.touched">
-              <span *ngIf="userPassword.hasError('required')">Password is required.</span>
-              <div  *ngIf="userPassword.hasError('minlength')">Password isn't long enough. (<em>minimum of 8 characters</em>)</div>
-            </div>
-            -->
-          </div>
-        </div>
-        
-         
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="confirm-password" type="password">
-            <label for="confirm-password">Confirm Password</label>
-            <!--
-             <div class="form-validation-message" *ngIf="userForm.controls.passwordConfirmation.dirty">
-              <span *ngIf="userForm.hasError('mismatchedPasswords')">Passwords do not match.</span>
-            </div>
-            -->
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="input-field col s12">
-            <button class="col s12 btn waves-effect waves-light btn-large green" type="submit">
-              register
-            </button>
-          </div>
-        </div>
-      </form>
-      
-      
-      
-      <div class="row">
-          <div class="input-field col s12">
-             <p class="center">
-                <span class="grey-text">Already have an account?</span>
-                <a [routerLink]="['/login']">Login</a>
-              </p> 
-              <p class="center home"> <a class="grey-text" [routerLink]="['/home']">Back to home</a> </p>
-          </div>
-      </div>
+    <user-form>Sign Up</user-form>
     </div>
+    <session-link></session-link>
   </div>
-<div>
+</div>
 
-<button (click)="signInUser()"> Submit</button>
-=======
-
-<user-form>Sign Up</user-form>
-
-
-
->>>>>>> 37c3b991855ec4ce5408777ad5f2dcf867d4dc32

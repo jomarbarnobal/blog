@@ -7,6 +7,7 @@ import { Router } from '@angular/router'
 
 
 
+
 import { 
     matchingPasswords, 
     emailValidator
@@ -14,11 +15,30 @@ import {
 
 @Component({
     templateUrl: './sign-up.component.html',
-    styleUrls: ['./sign-up.component.scss'],
+    styles: [`
+        .form-container{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          background: #3270a0;
+        }
+
+        .form-content {
+            
+        }
+        .form-inner {
+            background: #eee;
+            padding: 10px;
+        }
+    `],
     providers: [ FormService ]
 })
 
 export class SignUpComponent {
+    
+    private _errors: string[];
+
     constructor(
         private _tokenService: Angular2TokenService,
         private _formService: FormService,
@@ -27,25 +47,25 @@ export class SignUpComponent {
         this._formService.initForm(SIGN_UP_FORM)
         this._tokenService.init({
             apiPath: 'http://localhost:3000',
-            // registerAccountPath: 'auth'
         })
 
         this._formService.submit$.subscribe(
             (data: RegisterData) => this._tokenService.registerAccount(data).subscribe(
-                res => console.log(res),
-                error => console.log(error)
+                res => this._handleSuccess(res),
+                error => this._handleError(error)
             )
         )
     }
 
-    // signInUser(){
-    //     this._tokenService.registerAccount({
-    //         email: 'example@mail.com',
-    //         password: 'omizsaintr',
-    //         passwordConfirmation: 'omizsaintr'
-    //     }).subscribe (
-    //         res => console.log(res),
-    //         error => console.log(error)
-    //     )
-    // }
+    private _handleSuccess(data: any){
+        this._errors = null;
+        this._formService.unlockSubmit();
+        this._router.navigate(['sign-up-success']);
+    }
+
+    private _handleError(error: any){
+        this._errors = error.json().errors.full_messages;
+        this._formService.unlockSubmit();
+    }
+
 }
