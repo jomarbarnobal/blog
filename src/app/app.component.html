@@ -1,5 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<div *ngIf="_router.url != '/sign-up' ">
+<page-header></page-header>
+</div>
 
 <router-outlet></router-outlet>
