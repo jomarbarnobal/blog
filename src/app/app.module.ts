@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { routing } from './app.route'
+import { SharedModule } from './shared'
+
 
 // import angular2 materialize css module
 import {MaterializeModule } from 'angular2-materialize'
@@ -21,13 +23,18 @@ import { Angular2TokenService } from 'angular2-token'
     SignInComponent,
     SignUpComponent,
     HomeComponent,
+<<<<<<< HEAD
     HeaderComponent
+=======
+>>>>>>> 37c3b991855ec4ce5408777ad5f2dcf867d4dc32
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterializeModule,
+    ReactiveFormsModule,
+    SharedModule,
     routing
   ],
   providers: [ Angular2TokenService ],

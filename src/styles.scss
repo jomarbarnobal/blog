@@ -5,3 +5,55 @@ $secondary-color: color("blue", "lighten-1");
 
 $roboto-font-path: "~materialize-css/fonts/roboto/"; /* This is needed so the materialize.scss file can load the font */
 @import "~materialize-css/sass/materialize";
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
+.autocomplete-content {
+  margin-top: 0px;
+  position: absolute;
+}
+
+.input-field .prefix ~ input {
+  margin-left: .5rem;
+}
+
+.input-field .prefix ~ .autocomplete-content {
+    margin-left: -5rem;
+    width: 92%;
+    width: calc(100% - -5rem);
+}
+
+@media screen and (max-width: 992px) and (min-width: 800px) {
+    .user-form-container .item{
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 799px) and (min-width: 0) {
+    .user-form-container .item{
+        width: 90% !important;
+    }
+
+    
+}
+
+//session #login #register #edit
+
+.home a:hover {
+    color: #42a5f5 !important;
+}
+
+.home a.text-uppercase {
+    text-transform: uppercase;
+}
+
+.form-inner .form-field {
+    padding: 20px 10px;
+}
+
