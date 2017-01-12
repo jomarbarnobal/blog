@@ -5,6 +5,28 @@ $secondary-color: color("blue", "lighten-1");
 
 $roboto-font-path: "~materialize-css/fonts/roboto/"; /* This is needed so the materialize.scss file can load the font */
 @import "~materialize-css/sass/materialize";
+html, body {
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: rgba(0,0,0,0.87);
+}
+page-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    background: #3270a0;
+}
+
+nav {
+    background-color: #3270a0 !important;
+}
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -70,13 +92,6 @@ input:-webkit-autofill:active {
     }
 }
 
-.user-form-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: #3270a0;
-}
 
 .item{
     background-color: #fafafa;
@@ -109,11 +124,11 @@ input:-webkit-autofill:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background: #3270a0;
+    
+    background: #eee;
 }
 
 .form-inner {
-    background: #eee;
+    background: #fff;
     padding: 10px;
 }

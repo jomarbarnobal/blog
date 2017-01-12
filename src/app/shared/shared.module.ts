@@ -9,6 +9,7 @@ import { FormService, FormComponent } from './form';
 import { HeaderComponent } from './header';
 import { ErrorComponent } from './error';
 import { UserSessionLink } from './links';
+import { FooterComponent } from './footer';
 
 
 @NgModule({
@@ -23,14 +24,17 @@ import { UserSessionLink } from './links';
         UserFieldComponent,
         FormComponent,
         ErrorComponent,
-        UserSessionLink
+        UserSessionLink,
+        FooterComponent
         ],
+
     exports: [ 
         HeaderComponent, 
         UserFieldComponent,
         FormComponent,
         ErrorComponent,
-        UserSessionLink
+        UserSessionLink,
+        FooterComponent
         ]
 })
 export class SharedModule {}

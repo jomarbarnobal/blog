@@ -1,9 +1,7 @@
-<div *ngIf="_router.url != '/session/sign-up' 
-           && _router.url != '/session/sign-in' ">
+<main>
   <page-header></page-header>
-</div>
+  <router-outlet></router-outlet>
+</main>
 
-<router-outlet></router-outlet>
-
-
+<footer></footer>
 

@@ -12,7 +12,12 @@ import {
 @Component({
     templateUrl: './sign-up.component.html',
     styles: [`
-
+        .form-content h4 {
+            margin: 30px;
+        }
+        .session-link {
+            padding: 10px;
+        }
     `],
     providers: [ FormService ]
 })
