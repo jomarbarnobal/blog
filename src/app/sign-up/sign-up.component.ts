@@ -4,10 +4,6 @@ import { FormService, SIGN_UP_FORM  } from '../shared/form'
 import { RegisterData } from '../shared'
 import { Router } from '@angular/router'
 
-
-
-
-
 import { 
     matchingPasswords, 
     emailValidator
@@ -16,21 +12,7 @@ import {
 @Component({
     templateUrl: './sign-up.component.html',
     styles: [`
-        .form-container{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100vh;
-          background: #3270a0;
-        }
 
-        .form-content {
-            
-        }
-        .form-inner {
-            background: #eee;
-            padding: 10px;
-        }
     `],
     providers: [ FormService ]
 })

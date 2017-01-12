@@ -4,7 +4,7 @@ import { UserFieldComponent } from '../../shared/form/fields'
 
 @Component({
     selector: 'user-form',
-    templateUrl: './form.component.html',
+    templateUrl: './form.component.html'
 })
 
 export class FormComponent {

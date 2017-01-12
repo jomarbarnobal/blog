@@ -15,18 +15,22 @@ input:-webkit-autofill:active {
 }
 
 .autocomplete-content {
-  margin-top: 0px;
-  position: absolute;
+    margin-top: 0px;
+    position: absolute;
 }
 
 .input-field .prefix ~ input {
-  margin-left: .5rem;
+    margin-left: .5rem;
 }
 
 .input-field .prefix ~ .autocomplete-content {
     margin-left: -5rem;
     width: 92%;
     width: calc(100% - -5rem);
+}
+
+.form-container .form-content{
+        width: 30% !important;
 }
 
 @media screen and (max-width: 992px) and (min-width: 800px) {
@@ -40,7 +44,7 @@ input:-webkit-autofill:active {
         width: 90% !important;
     }
 
-    
+
 }
 
 //session #login #register #edit
@@ -58,45 +62,58 @@ input:-webkit-autofill:active {
 }
 
 .full-error-message{
-    background: #F44336;
+    background: rgb(253, 123, 113);
     margin: 15px 0 15px 0;
     padding: 1px 10px 10px 20px;
     p {
-        color: #eee;
+        color: #fafafa;
     }
 }
 
-   .user-form-container{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background: #3270a0;
-    }
+.user-form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #3270a0;
+}
 
-    .item
-    {
-      background-color: #fafafa;
-      border-radius: 3px;
-      width: 30%;
-      min-height: 30%;
-    }
-    .item .block-heading {
-      padding: 2px;
-      background: #42a5f5;
-    }
-    .item .this-btn {
-      display:block;
-      margin: -26px auto;
-    }
+.item{
+    background-color: #fafafa;
+    border-radius: 3px;
+    width: 30%;
+    min-height: 30%;
+}
 
-    .input-field {
-      position: relative;
-    }
-    .input-field .form-validation-message {
-      position: absolute;
-      font-size: 0.8rem;
-      color: #f44336;
-      bottom: 2px;
-    }
+.item .block-heading {
+    padding: 2px;
+    background: #42a5f5;
+}
 
+.item .this-btn {
+    display:block;
+    margin: -26px auto;
+}
+
+.input-field {
+    position: relative;
+}
+.input-field .form-validation-message {
+    position: absolute;
+    font-size: 0.8rem;
+    color: #f44336;
+    bottom: 2px;
+}
+
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #3270a0;
+}
+
+.form-inner {
+    background: #eee;
+    padding: 10px;
+}

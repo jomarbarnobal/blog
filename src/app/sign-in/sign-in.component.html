@@ -1,5 +1,10 @@
-<h1> This is sign-in page</h1>
 
-<button (click)="signUpUser()">Sign me in</button>
-
-<session-link></session-link>
+<div class="form-container">
+  <div class="form-content">
+    <error-message [errors]="_errors"></error-message>
+    <div class="form-inner">
+    <user-form>Sign in</user-form>
+    </div>
+    <session-link></session-link>
+  </div>
+</div>

@@ -4,6 +4,14 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'session-link',
   templateUrl: './user-link.component.html',
+  styles: [`
+    p a {
+      color: #eee;
+    }
+    p a:hover {
+      text-decoration: underline;
+    }
+  `]
 })
 
 export class UserSessionLink {
