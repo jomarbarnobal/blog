@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'session-link',
@@ -7,6 +8,8 @@ import { Component, Input } from '@angular/core';
 
 export class UserSessionLink {
   
-  @Input() case: string;
+  // @Input() case: string;
+
+  constructor(private _links: Router ){}
 
 }
