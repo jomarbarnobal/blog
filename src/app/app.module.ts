@@ -11,9 +11,10 @@ import { SharedModule } from './shared'
 // import angular2 materialize css module
 import {MaterializeModule } from 'angular2-materialize'
 import { AppComponent } from './app.component';
-import { HomeComponent } from './session';
+import { SessionComponent } from './session';
 import { SignInComponent } from './sign-in';
 import { SignUpComponent } from './sign-up';
+import { HomeComponent } from './home'
 // import angular2-token service
 import { Angular2TokenService } from 'angular2-token'
 
@@ -23,6 +24,7 @@ import { Angular2TokenService } from 'angular2-token'
     SignInComponent,
     SignUpComponent,
     HomeComponent,
+    SessionComponent
   ],
   imports: [
     CommonModule,
