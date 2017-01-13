@@ -9,6 +9,7 @@ html, body {
     font-family: "Roboto", sans-serif;
     font-weight: normal;
     color: rgba(0,0,0,0.87);
+    background: #eee;
 }
 page-wrapper {
     display: flex;
@@ -124,8 +125,6 @@ input:-webkit-autofill:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    background: #eee;
 }
 
 .form-inner {

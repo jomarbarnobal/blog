@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Angular2TokenService} from 'angular2-token';
 import { FormService, SIGN_IN_FORM } from '../shared/form';
 import { SignInData } from '../shared'
@@ -13,6 +13,7 @@ import { Router } from '@angular/router'
 export class SignInComponent {
 
     private _errors: string[];
+    private _returmUrl: string;
 
     constructor(
         private _formService: FormService,
@@ -31,11 +32,11 @@ export class SignInComponent {
             )
         )
     }
-
+    
     private _hadleSucess(data: any){
         this._errors = null;
         this._formService.unlockSubmit();
-        // this._router.navigate(['/'])
+        this._router.navigate([''])
     }
 
     private _handleError(error: any){

@@ -3,9 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { Angular2TokenService } from 'angular2-token'
 
 // Import component
-import { HomeComponent } from './session';
+import { SessionComponent } from './session';
 import { SignInComponent } from './sign-in';
 import { SignUpComponent } from './sign-up';
+import { HomeComponent } from './home';
 
 
 // const appRoutes: Routes = [
@@ -16,7 +17,10 @@ import { SignUpComponent } from './sign-up';
 // ]
 
 const appRoutes: Routes = [
-    { path: 'session', component: HomeComponent,
+    // { path: '', redirectTo: '/home', pathMatch: 'full' },
+    // { path: 'home', component: HomeComponent, canActivate: [ Angular2TokenService] },
+
+    { path: 'session', component: SessionComponent,
         children: [
             { path: 'sign-in', component: SignInComponent },
             { path: 'sign-up', component: SignUpComponent },

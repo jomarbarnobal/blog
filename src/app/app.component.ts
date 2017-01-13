@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router'
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { Angular2TokenService } from 'angular2-token';
 
 @Component({
   selector: 'page-wrapper',
@@ -8,6 +9,9 @@ import { Router } from '@angular/router'
 })
 export class AppComponent {
   title = 'app works!';
-
- constructor(private _router: Router){}
+  constructor(private _tokenService: Angular2TokenService){
+    this._tokenService.init({
+      apiPath: 'http://localhost:3000'
+    })
+  }
 }
