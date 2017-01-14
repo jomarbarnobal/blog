@@ -8,8 +8,10 @@
           <input placeholder="search....."type="text" id="autocomplete-input" materialize="autocomplete" [materializeParams]="[{'data': locations}]">
         </div>
       </li>
-      <li *ngIf="_tokenService.currentUserData != null"><a href="#"> {{ _tokenService.currentUserData?.email }}</a> </li>
-      <li *ngIf="_tokenService.currentUSerData != null"><a [routerLink]="['/session/sign-in']">Login</a></li>      
+      <li *ngIf="_tokenService.currentUserData != null">
+        <a href="#"> {{ _tokenService.currentUserData?.email }}</a> 
+      </li>
+      <li ><a [routerLink]="['/session/sign-in']">Login</a></li>      
     </ul>
      <ul id="slide-out" class="side-nav">
       <li><div class="userView">

@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common'
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule} from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { routing } from './app.route'
-import { SharedModule } from './shared'
+import { routing } from './app.route';
+import { SharedModule } from './shared';
 
 
 // import angular2 materialize css module
@@ -14,9 +14,10 @@ import { AppComponent } from './app.component';
 import { SessionComponent } from './session';
 import { SignInComponent } from './sign-in';
 import { SignUpComponent } from './sign-up';
-import { HomeComponent } from './home'
+import { HomeComponent } from './home';
+import { EmailConfirmationComponent } from './confirmation';
 // import angular2-token service
-import { Angular2TokenService } from 'angular2-token'
+import { Angular2TokenService } from 'angular2-token';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { Angular2TokenService } from 'angular2-token'
     SignInComponent,
     SignUpComponent,
     HomeComponent,
-    SessionComponent
+    SessionComponent,
+    EmailConfirmationComponent
   ],
   imports: [
     CommonModule,

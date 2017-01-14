@@ -34,8 +34,10 @@ export class SignUpComponent {
         this._formService.initForm(SIGN_UP_FORM)
         this._tokenService.init({
             apiPath: 'http://localhost:3000',
+            registerAccountCallback: 'http://localhost:4200/email-confirmation-success'
         })
 
+        
         this._formService.submit$.subscribe(
             (data: RegisterData) => this._tokenService.registerAccount(data).subscribe(
                 res => this._handleSuccess(res),

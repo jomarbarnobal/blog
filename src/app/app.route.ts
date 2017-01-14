@@ -7,6 +7,7 @@ import { SessionComponent } from './session';
 import { SignInComponent } from './sign-in';
 import { SignUpComponent } from './sign-up';
 import { HomeComponent } from './home';
+import { EmailConfirmationComponent } from './confirmation'
 
 
 // const appRoutes: Routes = [
@@ -19,7 +20,7 @@ import { HomeComponent } from './home';
 const appRoutes: Routes = [
     // { path: '', redirectTo: '/home', pathMatch: 'full' },
     // { path: 'home', component: HomeComponent, canActivate: [ Angular2TokenService] },
-
+    { path: 'email-confirmation-success', component: EmailConfirmationComponent },
     { path: 'session', component: SessionComponent,
         children: [
             { path: 'sign-in', component: SignInComponent },
