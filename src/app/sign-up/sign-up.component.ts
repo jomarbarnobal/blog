@@ -33,8 +33,8 @@ export class SignUpComponent {
      ){
         this._formService.initForm(SIGN_UP_FORM)
         this._tokenService.init({
-            apiPath: 'http://localhost:3000',
-            registerAccountCallback: 'http://localhost:4200/email-confirmation-success'
+            apiPath: 'https://blog-api-app.herokuapp.com',
+            registerAccountCallback: 'https://jomarbarnobal.github.io/blog/email-confirmation-success'
         })
 
         
@@ -49,7 +49,7 @@ export class SignUpComponent {
     private _handleSuccess(data: any){
         this._errors = null;
         this._formService.unlockSubmit();
-        this._router.navigate(['sign-up-success']);
+        this._router.navigate(['successfull-sign-up']);
     }
 
     private _handleError(error: any){

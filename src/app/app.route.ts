@@ -8,18 +8,13 @@ import { SignInComponent } from './sign-in';
 import { SignUpComponent } from './sign-up';
 import { HomeComponent } from './home';
 import { EmailConfirmationComponent } from './confirmation'
+import { SuccesSignupComponent } from './success-signup'
 
-
-// const appRoutes: Routes = [
-//     { path: '', redirectTo: '/home', pathMatch: 'full'},
-//     { path: 'home', component: HomeComponent },
-//     { path: 'sign-in', component: SignInComponent },
-//     { path: 'sign-up', component: SignUpComponent }
-// ]
 
 const appRoutes: Routes = [
     // { path: '', redirectTo: '/home', pathMatch: 'full' },
     // { path: 'home', component: HomeComponent, canActivate: [ Angular2TokenService] },
+    { path: 'successfull-sign-up', component: SuccesSignupComponent },
     { path: 'email-confirmation-success', component: EmailConfirmationComponent },
     { path: 'session', component: SessionComponent,
         children: [

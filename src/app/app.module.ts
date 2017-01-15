@@ -16,6 +16,7 @@ import { SignInComponent } from './sign-in';
 import { SignUpComponent } from './sign-up';
 import { HomeComponent } from './home';
 import { EmailConfirmationComponent } from './confirmation';
+import { SuccesSignupComponent } from './success-signup'
 // import angular2-token service
 import { Angular2TokenService } from 'angular2-token';
 
@@ -26,7 +27,8 @@ import { Angular2TokenService } from 'angular2-token';
     SignUpComponent,
     HomeComponent,
     SessionComponent,
-    EmailConfirmationComponent
+    EmailConfirmationComponent,
+    SuccesSignupComponent
   ],
   imports: [
     CommonModule,
