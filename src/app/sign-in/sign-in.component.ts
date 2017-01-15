@@ -21,7 +21,7 @@ export class SignInComponent {
         ){
         this._formService.initForm(SIGN_IN_FORM)
         this._tokenService.init({
-            apiPath: 'http://localhost:3000'
+            apiPath: 'https://blog-api-app.herokuapp.com'
         })
 
         this._formService.submit$.subscribe(

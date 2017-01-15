@@ -16,7 +16,7 @@ export class AppComponent {
    private _tokenService: Angular2TokenService
   ){
     this._tokenService.init({
-      apiPath: 'http://localhost:3000'
+      apiPath: 'https://blog-api-app.herokuapp.com'
     }) 
   }
 

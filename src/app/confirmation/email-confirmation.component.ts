@@ -9,6 +9,8 @@ export class EmailConfirmationComponent {
     constructor(
         private _tokenService: Angular2TokenService
     ){
-        this._tokenService.init()
+        this._tokenService.init({
+            apiPath: 'https://blog-api-app.herokuapp.com'
+        })
     }
 }
