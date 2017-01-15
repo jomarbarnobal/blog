@@ -8,11 +8,28 @@
           <input placeholder="search....."type="text" id="autocomplete-input" materialize="autocomplete" [materializeParams]="[{'data': locations}]">
         </div>
       </li>
-      <li *ngIf="_tokenService.currentUserData != null">
+      <!--<li *ngIf="_tokenService.currentUserData != null">
         <a href="#"> {{ _tokenService.currentUserData?.email }}</a> 
+      </li> -->
+      <li> 
+         <a 
+          materialize="dropdown" 
+          [materializeActions]="dropdownActions" 
+          class='dropdown-button' 
+          href='#' data-activates='dropdown1'>
+           {{ _tokenService.currentUserData?.email }}
+          <i *ngIf="_tokenService.currentUserData" class="material-icons right">arrow_drop_down</i>
+          </a >
+          <ul id='dropdown1' class='dropdown-content' *ngIf="drop">
+          <li><a>one</a></li>
+          <li><a>two</a></li>
+          <li class="divider"></li>
+          <li (click)="logOut()"><a>Log out</a></li>
+        </ul>
       </li>
-      <li ><a [routerLink]="['/session/sign-in']">Login</a></li>      
+      <li *ngIf="!_tokenService.currentUserData"><a [routerLink]="['/session/sign-in']">Login</a></li>      
     </ul>
+    <!-- side nav -->
      <ul id="slide-out" class="side-nav">
       <li><div class="userView">
         <div class="background">
@@ -21,14 +38,20 @@
         <a href="#!user"><img class="circle" src="assets/images/yuna.jpg"></a>
         <a href="#!name"><span class="white-text name">John Doe</span></a>
         <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
-      </div></li>
-      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      </div>
+      </li>
+
+      <li>
+        <a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a>
+      </li>
+
       <li><a href="#!">Second Link</a></li>
       <li><div class="divider"></div></li>
       <li><a class="subheader">Subheader</a></li>
       <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
     </ul>
-    <!-- sidebar mene toggle -->
+
+    <!-- sidebar menu toggle -->
     <a href="#" materialize="sideNav" [materializeParams]="[{edge:'left'}]" data-activates="slide-out"
       class="button-collapse">
       <i class="material-icons">menu</i>
@@ -36,3 +59,4 @@
    </div>
 </nav>
 
+ 

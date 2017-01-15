@@ -8,6 +8,7 @@ import { Angular2TokenService } from 'angular2-token';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   title = 'app works!';
 
  constructor(
@@ -15,7 +16,8 @@ export class AppComponent {
    private _tokenService: Angular2TokenService
   ){
     this._tokenService.init({
-      apiPath: 'https://blog-api-app.herokuapp.com'
+      apiPath: 'http://localhost:3000'
     }) 
   }
+
 }
