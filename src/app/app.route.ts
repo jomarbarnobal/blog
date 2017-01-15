@@ -12,15 +12,15 @@ import { SuccesSignupComponent } from './success-signup'
 
 
 const appRoutes: Routes = [
-    // { path: '', redirectTo: '/home', pathMatch: 'full' },
-    // { path: 'home', component: HomeComponent, canActivate: [ Angular2TokenService] },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent},
     { path: 'successfull-sign-up', component: SuccesSignupComponent },
     { path: 'email-confirmation-success', component: EmailConfirmationComponent },
     { path: 'session', component: SessionComponent,
         children: [
             { path: 'sign-in', component: SignInComponent },
             { path: 'sign-up', component: SignUpComponent },
-        ] 
+        ]
     }
     
 ]

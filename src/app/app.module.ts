@@ -28,7 +28,7 @@ import { Angular2TokenService } from 'angular2-token';
     HomeComponent,
     SessionComponent,
     EmailConfirmationComponent,
-    SuccesSignupComponent
+    SuccesSignupComponent,
   ],
   imports: [
     CommonModule,

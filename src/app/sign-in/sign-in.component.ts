@@ -13,7 +13,6 @@ import { Router } from '@angular/router'
 export class SignInComponent {
 
     private _errors: string[];
-    private _returmUrl: string;
 
     constructor(
         private _formService: FormService,
@@ -22,7 +21,7 @@ export class SignInComponent {
         ){
         this._formService.initForm(SIGN_IN_FORM)
         this._tokenService.init({
-            apiPath: 'https://blog-api-app.herokuapp.com'
+            apiPath: 'http://localhost:3000'
         })
 
         this._formService.submit$.subscribe(
