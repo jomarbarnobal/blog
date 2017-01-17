@@ -19,7 +19,6 @@ import {
             padding: 10px;
         }
     `],
-    providers: [ FormService ]
 })
 
 export class SignUpComponent {
