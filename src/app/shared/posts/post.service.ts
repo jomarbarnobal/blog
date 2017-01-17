@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PostService {
-  private _postUrl: string = 'http://localhost:3000/v1/posts';
+  private _postUrl: string = 'https://blog-api-app.herokuapp.com/v1/posts';
 
   constructor(private _http: Http){}
 
